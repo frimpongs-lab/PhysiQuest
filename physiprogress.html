@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress | PhysiQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="physihome.html">PhysiQuest</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="navigation" class="navigation">
+      <a href="physihome.html">Home</a>
+      <a href="physitopics.html">Topics</a>
+      <a href="physiprogress.html">Progress</a>
+      <a href="physireferences.html">References</a>
+    </nav>
+    <div class="points-pill">Points: <strong id="headerPoints">0</strong></div>
+    <div class="user-account">
+    <span id="loggedInName">Welcome!</span>
+    <button id="logoutButton" type="button" class="logout-button">
+        Log out
+    </button>
+</div>
+  </header>
+
+  <main class="container">
+    <h1>Your Progress</h1>
+    <p class="intro">Your quiz results and accuracy across all three topics.</p>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <h2 id="totalPoints">0</h2>
+        <p>Total points</p>
+      </article>
+
+      <article class="stat-card">
+        <h2 id="totalAnswered">0</h2>
+        <p>Questions answered</p>
+      </article>
+
+      <article class="stat-card">
+        <h2 id="totalCorrect">0</h2>
+        <p>Correct answers</p>
+      </article>
+
+      <article class="stat-card">
+        <h2 id="overallAccuracy">0%</h2>
+        <p>Overall accuracy</p>
+      </article>
+    </section>
+
+    <section class="study-section">
+      <h2>Measurements</h2>
+      <p id="measurementsAccuracy">0%</p>
+      <div class="progress-track"><div id="measurementsBar"></div></div>
+      <p id="measurementsStats"></p>
+
+      <h2>Movement and Movers</h2>
+      <p id="movementAccuracy">0%</p>
+      <div class="progress-track"><div id="movementBar"></div></div>
+      <p id="movementStats"></p>
+
+      <h2>Waves and Sound</h2>
+      <p id="wavesAccuracy">0%</p>
+      <div class="progress-track"><div id="wavesBar"></div></div>
+      <p id="wavesStats"></p>
+    </section>
+
+    <button class="button secondary" type="button" onclick="resetProgress()">Reset Progress</button>
+    <p id="resetMessage" class="feedback" aria-live="polite"></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Learn, practise, improve · <a href="physireferences.html">References</a></p>
+  </footer>
+</body>
+</html>

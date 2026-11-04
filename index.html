@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | PhysiQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.script.js" defer></script>
+</head>
+<body data-page="auth">
+  <main class="auth-wrap">
+    <section class="auth-card hero container">
+      <h1 class="auth-logo">PhysiQuest</h1>
+      <p class="intro">Your MYP4 physics revision app.<br>Learn, practise, improve.</p>
+
+      <div class="tabs">
+        <button id="tabIn" class="tab on button" type="button">Sign in</button>
+        <button id="tabUp" class="tab button" type="button">Create account</button>
+      </div>
+
+      <form id="authForm" novalidate>
+        <div class="wrapper">
+          <div class="sub-wrapper">
+              <label for="authName">Username</label>
+              <input id="authName" type="text" autocomplete="username" maxlength="20">
+          </div>
+          <div class="sub-wrapper">
+            <label for="authPass">Password</label>
+            <input id="authPass" type="password" autocomplete="current-password">
+          </div>
+        </div>
+       
+
+        
+        <div id="confirmRow" hidden>
+          <label for="authPass2">Confirm password</label>
+          <input id="authPass2" type="password" autocomplete="new-password">
+        </div>
+
+        <p id="authMsg" class="feedback error" aria-live="polite"></p>
+        <button id="authSubmit" class="button" type="submit">Sign in</button>
+      </form>
+
+      <p class="auth-note">Accounts are saved in this browser, on this device. Your points and progress stay linked to your username each time you sign in.</p>
+    </section>
+  </main>
+</body>
+</html>

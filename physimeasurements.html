@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measurements | PhysiQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.script.js" defer></script>
+</head>
+<body data-topic="measurements">
+  <header class="site-header">
+    <a class="brand" href="physihome.html">PhysiQuest</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="navigation" class="navigation">
+      <a href="physihome.html">Home</a>
+      <a href="physitopics.html">Topics</a>
+      <a href="physiprogress.html">Progress</a>
+      <a href="physireferences.html">References</a>
+    </nav>
+    <div class="points-pill">Points: <strong id="headerPoints">0</strong></div>
+    <div class="user-account">
+    <span id="loggedInName">Welcome!</span>
+    <button id="logoutButton" type="button" class="logout-button">
+        Log out
+    </button>
+</div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="physitopics.html">← Back to topics</a>
+    <h1 id="studyTitle">Measurements</h1>
+    <p class="intro">Review these notes before starting the quiz.</p>
+    <div id="studyContent" class="study-content"></div>
+    <section class="study-section ready-box"><h2>Ready to test your knowledge?</h2><button id="startStudyQuiz" class="button" type="button">Start Quiz</button></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Learn, practise, improve · <a href="physireferences.html">References</a></p>
+  </footer>
+</body>
+</html>

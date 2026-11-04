@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walkthrough | PhysiQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="physihome.html">PhysiQuest</a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav id="navigation" class="navigation">
+      <a href="physihome.html">Home</a>
+      <a href="physitopics.html">Topics</a>
+      <a href="physiprogress.html">Progress</a>
+      <a href="physireferences.html">References</a>
+    </nav>
+    <div class="points-pill">Points: <strong id="headerPoints">0</strong></div>
+    <div class="user-account">
+    <span id="loggedInName">Welcome!</span>
+    <button id="logoutButton" type="button" class="logout-button">
+        Log out
+    </button>
+</div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="physitopics.html">← Back to topics</a>
+
+    <section class="study-section">
+      <h1>Question Walkthrough</h1>
+      <h2 id="walkthroughQuestion">Question</h2>
+
+      <p><strong>Your answer:</strong> <span id="yourAnswer">Not available</span></p>
+      <p><strong>Correct answer:</strong> <span id="correctAnswer"></span></p>
+
+      <h3>How to solve it</h3>
+      <ol id="walkthroughSteps"></ol>
+
+      <div class="key-idea"><h3>Key idea</h3>
+      <p id="keyIdea"></p></div>
+
+      <div class="button-row">
+        <button class="button" type="button" onclick="retryQuizQuestion()">Try Again</button>
+        <a class="button secondary" href="physitopics.html">Back to Topics</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Learn, practise, improve · <a href="physireferences.html">References</a></p>
+  </footer>
+</body>
+</html>
