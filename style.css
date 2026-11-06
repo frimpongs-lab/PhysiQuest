@@ -411,3 +411,115 @@ html { scroll-behavior: smooth; }
         justify-content: center;
     }
 }
+/* Sign-in cover page and account bar */
+body[data-page="auth"] {
+  background:
+    radial-gradient(900px 500px at 8% -10%, #bfe9e5 0, transparent 60%),
+    radial-gradient(800px 500px at 100% 110%, #cfe4f6 0, transparent 60%),
+    #f3f8f8;
+}
+.auth-wrap { width: min(440px, 92%); margin: auto; padding: 40px 0; }
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e4eeee;
+  border-radius: 28px;
+  padding: 44px 36px 32px;
+  box-shadow: 0 24px 60px rgba(12, 74, 80, .14), 0 2px 6px rgba(12, 74, 80, .06);
+  animation: authIn .45s ease both;
+}
+@keyframes authIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.auth-logo { order: 1; text-align: center; margin: 0 0 6px; font-size: 2.1rem; font-weight: 800; color: #12323b; letter-spacing: -.5px; }
+.auth-logo::before {
+  content: "\269B\FE0E";
+  display: block;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0fa5a5, #087e83);
+  color: #ffffff;
+  font-size: 2.1rem;
+  box-shadow: 0 0 0 8px #e5f4f2, 0 10px 24px rgba(8, 126, 131, .3);
+}
+.auth-card .intro { order: 2; text-align: center; margin: 0 0 26px; font-size: 1rem; line-height: 1.6; color: #587078; }
+#authForm { order: 3; }
+.auth-card label {
+  display: block;
+  margin: 18px 0 8px 8px;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #3d6b72;
+}
+.auth-card input {
+  width: 100%;
+  padding: 15px 22px;
+  border: 1.5px solid #d5e3e3;
+  border-radius: 999px;
+  background: #f8fbfb;
+  color: #12323b;
+  font-size: 1rem;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.auth-card input:focus {
+  outline: none;
+  border-color: #087e83;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(8, 126, 131, .15);
+}
+.auth-card .feedback { margin: 14px 0 0; min-height: 0; text-align: center; font-size: .9rem; }
+.auth-card .feedback:empty { display: none; }
+.auth-card .feedback:not(:empty) { padding: 10px 14px; border-radius: 14px; background: #fdecec; color: #a32e2e; }
+.auth-card #authSubmit {
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px 24px;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, #0fa5a5, #087e83);
+  box-shadow: 0 10px 22px rgba(8, 126, 131, .28);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.auth-card #authSubmit:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(8, 126, 131, .34); }
+.auth-card #authSubmit:active { transform: none; }
+
+/* One main button: the mode switch becomes a plain text link under the form */
+.tabs { order: 4; display: flex; justify-content: center; margin: 18px 0 0; padding: 0; background: none; border-radius: 0; }
+.tab { flex: none; display: none; padding: 6px 4px; border: 0; background: none; color: #087e83; font-size: .95rem; font-weight: 800; cursor: pointer; }
+.tab:not(.on) { display: inline-block; }
+.tab:hover { color: #06676b; text-decoration: underline; }
+#tabUp::before { content: "New here? "; color: #587078; font-weight: 400; }
+#tabIn::before { content: "Already have an account? "; color: #587078; font-weight: 400; }
+
+.auth-note { order: 5; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid #edf3f3; color: #7d9096; font-size: .8rem; line-height: 1.5; text-align: center; }
+
+
+.user-chip { display: flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 700; }
+.user-chip button { border: 1px solid #087e83; background: transparent; color: #087e83; border-radius: 20px; padding: 6px 14px; font-weight: 700; cursor: pointer; font-size: .85rem; }
+@media (max-width: 650px) {
+  .user-chip { order: 3; }
+  .auth-card { padding: 34px 22px 26px; border-radius: 24px; }
+}
+.auth-card .tabs .tab,
+.auth-card .tabs .tab:hover,
+.auth-card .tabs .tab:focus,
+.auth-card .tabs .tab:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 6px;
+  padding: 6px 4px !important;
+  font-size: .95rem !important;
+  color: #087e83 !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.auth-card .tabs .tab:hover { text-decoration: underline; }
+.auth-card .tabs .tab:focus-visible { outline: 2px solid #087e83; outline-offset: 2px; }
